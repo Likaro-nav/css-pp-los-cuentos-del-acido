@@ -1,0 +1,82 @@
+
+body{
+    background-image: 
+    linear-gradient(rgba(19, 18, 18, 0.45), rgba(22, 21, 21, 1)),
+    url(../trippy.gif);
+    background-size: cover;
+    
+    /* box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+} */
+
+
+/* ------- 1. -------- */
+figcaption{
+    width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    color: coral;
+    text-align: center; /* Duda 2: No consigo que me salga alineación del texto correctamente. */
+    text-transform: capitalize; 
+}
+
+#losBuenos *, #Inanimados *, #losMalos *{
+    /* 
+    height: 200px; */
+    width: 100px;
+    display: inline-block;
+    padding: 70px 100px;
+    margin:  auto;
+    transform: translate(50px 30px);
+}
+
+/* ------ 2. ------ */
+.buenos{
+    display: inline-block;
+    animation: movimiento 3s infinite alternate; 
+}
+
+@keyframes movimiento{
+    0%{transform: translate(15px)}
+    50%{transform: translate(25px)}
+    100%{transform:translate(50px)}
+}
+
+/* ------- 3. ------ */
+.objeto{
+    display:inline-block;
+    animation: rotacion 3s infinite alternate;
+}
+
+@keyframes rotacion{
+    0%{transform: rotate(-45deg)}
+    50%{transform: rotate (45deg)}
+    100%{transform: rotate(90deg)}
+}
+
+/* ------ 4.------- */
+#bruja{
+    transition-property: transform;
+    transition-duration: 5s;
+    animation-direction: alternate;
+}
+#bruja:hover{
+    transform: skewX(20deg) skewY(10deg);
+} 
+
+#dragon{
+    transition-property: scale;
+    transition-duration: 5s;
+    animation-direction: alternate;
+}
+#dragon:hover{
+    transform: scale(2)
+} 
+
+#nomo{
+    transition-property: rotate;
+    transition-duration: 5s;
+    animation-direction: alternate;
+}
+#nomo:hover{
+    transform: rotate(360 deg)
+} 
